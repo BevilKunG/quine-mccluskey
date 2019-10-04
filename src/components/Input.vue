@@ -11,7 +11,9 @@
     </div>
   </div>
 
-  {{ selectedMinTerm }}
+  <div class="text-center mt-5">
+    <button class="btn btn-primary" @click="$emit('completeInput',{ selectedMinTerm, selectedBit })">Calculate</button>
+  </div>
 
 </div>
 </template>
