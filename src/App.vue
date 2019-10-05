@@ -1,8 +1,9 @@
 <template>
   <div class="container mt-5">
+    <button v-if="isInputComplete" class="btn btn-primary btn-sm" @click="isInputComplete = false">back</button>
     <h1 class="text-center">Quine McCluskey</h1>
     <Input v-if="!isInputComplete" @completeInput="value => prepareCalculation(value)"/>
-    <Result v-else :minTerms="selectedMinTerm" :selectedBit="selectedBit" @reInput="isInputComplete = false"/>
+    <Result v-else :minTerms="selectedMinTerm" :selectedBit="selectedBit"/>
   </div>
 </template>
 
