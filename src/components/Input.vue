@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="mt-5">
   <select class="custom-select" v-model="selectedBit">
-    <option v-for="i in maxBit" :value="i">{{ i }}</option>
+    <option v-for="i in maxBit - 1" :value="i+1">{{ i+1 }}</option>
   </select>
 
   <h2 class="mt-5 ml-2">Which minterm is on?</h2>
@@ -22,7 +22,7 @@
 export default {
   data() {
     return {
-      selectedBit: 1,
+      selectedBit: 2,
       maxBit: 4,
       minTermActive: [],
       selectedMinTerm: []
